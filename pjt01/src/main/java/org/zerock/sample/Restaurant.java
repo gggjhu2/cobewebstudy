@@ -4,36 +4,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 //import org.springframework.beans.factory.annotation.Autowired;
 import lombok.Data;
-//TODO:Ã¥¿¡³ª¿Â´ë·Î SETTER¸¦ »ç¿ëÇÏÁö¾Ê¾Æ ¼­ ÀÛµ¿¾ÈÇÏ¿© »èÁ¦ÇÔ
+import lombok.Setter;
+//TODO:lomnbok onmethod ì•ˆë¨¹í˜€ì„œ ì‚¬ìš©ì„í•˜ì§€ì•Šì•„ ìƒìœ„ ë¡¬ë³µ ì„í´íŠ¸ì— ì‚¬ìš©í•˜ì§€ì•ŠìŒ ì—ëŸ¬ ëœ¸
 //import lombok.Setter;
 
 //@SuppressWarnings("unused")
 @Component
 @Data
 public class Restaurant {
-	
-	  @Autowired
-	   private Chef chef;
 
-//	public Chef getChef() {
-//		return chef;
-//	}
-//
-//	public void setChef(Chef chef) {
-//		this.chef = chef;
-//	}
-	 	
-		
+	@Autowired
+	private Chef chef;
+
+	public Chef getChef() {
+		return chef;
+	}
+
+	public void setChef(Chef chef) {
+		this.chef = chef;
+	}
+
 //	public class Restaurant{
 //	 @Setter(onMethod =@_({ @Autowired}))
-//	 private Chef chef;
+//	 b private Chef chef;
 //}
-	  
-	  
-	  
-// TODO: ¹ØÀÇ ÇØ´ç ¸í·É¾î´Â java version 1.8ÃÊ°ú¿¡¼­	  
+
+// TODO: ìë°”1.8 ì—ì„œëŠ” ì‘ë™ì•ˆí•œë‹¹
 //	 @Setter(onMethod =@_({ @Autowired}))
 //	 private Chef chef;
 //	
-	
+
 }
